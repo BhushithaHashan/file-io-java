@@ -8,10 +8,18 @@ public class FileReaderInstance2 {
     public static void main(String[] args) {
         String filePath = "/home/bhushitha/Documents/practice/file-io-practice/file-io/src/main/java/com/example/InputStream.java";
         try(FileReader fr = new FileReader(filePath);BufferedReader br = new BufferedReader(fr)) {
-            int letter;
-            while ( (letter=br.read())!=-1) {
-                System.out.println((char)letter+br.readLine());
+            String classFile = "";
+            while (true ) {
+                String line = br.readLine();
+                if (line==null) {
+                    break;
+                }
+                if (classFile==null) {
+                    classFile = line+"\n";
+                }
+                classFile +=(line+"\n");
             }
+            System.out.println(classFile);
             
         } catch (IOException e) {
             // TODO: handle exception
