@@ -1,4 +1,4 @@
-### File handling
+# File handling
 
 Streams-stream is seq of data which is either in byte format or character format(unicode)
 
