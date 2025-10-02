@@ -37,3 +37,13 @@ In short, the **idea** is the Stream abstraction, and the **code** that executes
 
 
 
+---
+## 3.InputStreamReader
+
+-takes an Input stream extended class
+-has read method and returns chars
+-end of the buffer denoted by -1
+-read method if the buffer is empty and ready state is false will block the thread and wait for input to insert from termianl buffer,and as soon as terminal buffer enter the char to buffer itll read the char
+-return char by char as int
+-EOF marker is -1 since -1 is not a char so its convenient
+-has a ready state returns false if buffer is empty return true if buffer is not empty
