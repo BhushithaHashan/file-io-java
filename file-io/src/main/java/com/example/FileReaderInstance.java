@@ -8,7 +8,7 @@ public class FileReaderInstance {
     public static void main(String[] args) {
         try(FileReader fileReader = new FileReader("notes.txt")) {
             int letters = fileReader.read();
-            while (fileReader.ready()) {
+            while (letters!=-1) {
                 System.out.println((char)letters);
                 letters = fileReader.read();
             }
